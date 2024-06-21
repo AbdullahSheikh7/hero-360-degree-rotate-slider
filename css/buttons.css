@@ -1,0 +1,68 @@
+.hero .buttons {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0;
+}
+
+.hero .buttons .button {
+    margin: 4vh;
+    padding: 0.5%;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: grid;
+    place-items: center;
+    height: 5vh;
+    aspect-ratio: 1 / 1;
+    backdrop-filter: blur(5px);
+}
+
+.hero .buttons .button::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+@keyframes btnSwitchImageClick {
+    0% {
+        top: 0;
+        left: 0;
+        border: 20px solid white;
+        width: 100%;
+    }
+    25% {
+        top: -50%;
+        left: -50%;
+        border: 40px solid white;
+        width: 200%;
+        opacity: 1;
+    }
+    100% {
+        top: -50%;
+        left: -50%;
+        border: 0px solid white;
+        width: 200%;
+        opacity: 0;
+    }
+}
+
+.hero .buttons .button.click::after {
+    animation: btnSwitchImageClick 250ms linear;
+}
+
+.hero .buttons .button svg {
+    height: 80%;
+    fill: none;
+    stroke: white;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

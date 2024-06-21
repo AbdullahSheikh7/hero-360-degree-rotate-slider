@@ -1,0 +1,44 @@
+.hero .content {
+    position: absolute;
+    place-self: center;
+    text-align: center;
+    color: white;
+    display: grid;
+    row-gap: 5vw;
+}
+
+.hero .content .title {
+    overflow: hidden;
+}
+
+.hero .content .title p {
+    font-family: Krylon;
+    position: relative;
+    top: 0;
+    letter-spacing: 6vw;
+    font-size: 4vw;
+    transition: top 875ms ease-in-out;
+}
+
+.hero .content.switching .title p {
+    transition: top 875ms ease-in-out;
+    top: 5vw;
+}
+
+.hero .content .subtitle {
+    overflow: hidden;
+}
+
+.hero .content .subtitle p {
+    font-family: Cambria;
+    position: relative;
+    top: 0;
+    letter-spacing: 4vw;
+    font-size: 2vw;
+    transition: top 875ms ease-in-out;
+}
+
+.hero .content.switching .subtitle p {
+    transition: top 875ms ease-in-out;
+    top: 2vw;
+}
