@@ -8,6 +8,7 @@
 }
 
 .hero .circles-container .circles-subcontainer {
+    height: 100%;
     position: relative;
     display: grid;
     place-items: center;
@@ -18,36 +19,65 @@
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     overflow: hidden;
-    background-color: #000;
-}
-.hero .circles-container .circles-subcontainer .image::before {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: url("../img/images/img1.jpg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .hero .circles-container .circles-subcontainer .circle-3 {
     width: 100%;
-}
-.hero .circles-container .circles-subcontainer .circle-2 {
-    width: 70%;
-}
-.hero .circles-container .circles-subcontainer .circle-1 {
-    width: 40%;
-}
-
-.hero .circles-container .circles-subcontainer .circle-3::before {
     background-size: 100%;
 }
-.hero .circles-container .circles-subcontainer .circle-2::before {
+
+.hero .circles-container .circles-subcontainer .circle-2 {
+    width: 70%;
     background-size: calc(100% * (100 / 70));
-    opacity: .7;
 }
-.hero .circles-container .circles-subcontainer .circle-1::before {
+
+.hero .circles-container .circles-subcontainer .circle-1 {
+    width: 40%;
     background-size: calc(100% * (100 / 40));
+}
+
+.hero .circles-container .circles-subcontainer :is(.circle-1, .circle-2, .circle-3) {
+    opacity: 1;
+    rotate: 0deg;
+}
+
+.hero .circles-container.next .circles-subcontainer :is(.circle-1, .circle-2, .circle-3) {
+    transition: background-size 1s ease-in-out, rotate 2s ease-in-out, background-image 2s linear
+}
+.hero .circles-container.next .circles-subcontainer .circle-3 {
+    animation: next-circle-3 2s ease-in-out 200ms;
+}
+.hero .circles-container.next .circles-subcontainer .circle-2 {
+    animation: next-circle-2 2s ease-in-out 100ms;
+}
+.hero .circles-container.next .circles-subcontainer .circle-1 {
+    animation: next-circle-1 2s ease-in-out;
+}
+
+
+.hero .circles-container.back .circles-subcontainer :is(.circle-1, .circle-2, .circle-3) {
+    transition: background-size 1s ease-in-out, rotate 2s ease-in-out, background-image 2s linear
+}
+.hero .circles-container.back .circles-subcontainer .circle-3 {
+    animation: back-circle-3 2s ease-in-out 200ms;
+}
+.hero .circles-container.back .circles-subcontainer .circle-2 {
+    animation: back-circle-2 2s ease-in-out 100ms;
+}
+.hero .circles-container.back .circles-subcontainer .circle-1 {
+    animation: back-circle-1 2s ease-in-out;
+}
+
+.hero .circles-container .circles-subcontainer .circle-2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    background-color: black;
 }

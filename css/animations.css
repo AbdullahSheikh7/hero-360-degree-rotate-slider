@@ -1,92 +1,83 @@
-/* Next image */
-@keyframes switchNextCircle3 {
+@keyframes back-circle-3 {
     0% {
-        scale: 1;
+        background-size: 100%;
+        rotate: 0deg;
     }
     50% {
-        scale: 2;
+        background-size: 200%;
     }
     100% {
-        scale: 1;
-    }
-}
-@keyframes switchNextCircle2 {
-    0% {
-        scale: 1;
-    }
-    50% {
-        scale: 1.5;
-    }
-    100% {
-        scale: 1;
-    }
-}
-@keyframes switchNextCircle1 {
-    0% {
-        scale: 1;
-    }
-    50% {
-        scale: 1.25;
-    }
-    100% {
-        scale: 1;
+        background-size: 100%;
+        rotate: -360deg;
     }
 }
 
-/* Back image */
-@keyframes switchBackCircle3 {
+@keyframes back-circle-2 {
     0% {
-        scale: 1;
+        background-size: calc(100%*(100/70));
+        rotate: 0deg;
     }
     50% {
-        scale: 2;
+        background-size: calc(1.5*(100%*(100/70)));
     }
     100% {
-        scale: 1;
-    }
-}
-@keyframes switchBackCircle2 {
-    0% {
-        scale: 1;
-    }
-    50% {
-        scale: 1.5;
-    }
-    100% {
-        scale: 1;
-    }
-}
-@keyframes switchBackCircle1 {
-    0% {
-        scale: 1;
-    }
-    50% {
-        scale: 1.25;
-    }
-    100% {
-        scale: 1;
+        background-size: calc(100%*(100/70));
+        rotate: -360deg;
     }
 }
 
-/* Animation class */
-/* Next */
-.hero .circles-container .circles-subcontainer.next .circle-3::before {
-    animation: switchNext 1500ms ease-in-out 250ms forwards, switchNextCircle3 1500ms ease-in-out 250ms forwards;
-}
-.hero .circles-container .circles-subcontainer.next .circle-2::before {
-    animation: switchNext 1500ms ease-in-out 125ms forwards, switchNextCircle2 1500ms ease-in-out 125ms forwards;
-}
-.hero .circles-container .circles-subcontainer.next .circle-1::before {
-    animation: switchNext 1500ms ease-in-out 0s forwards, switchNextCircle1 1500ms ease-in-out 0s forwards;
+@keyframes back-circle-1 {
+    0% {
+        background-size: calc(100%*(100/40));
+        rotate: 0deg;
+    }
+    50% {
+        background-size: calc(1.25*(100%*(100/40)));
+    }
+    100% {
+        background-size: calc(100%*(100/40));
+        rotate: -360deg;
+    }
 }
 
-/* Back */
-.hero .circles-container .circles-subcontainer.back .circle-3::before {
-    animation: switchBack 1500ms ease-in-out 250ms forwards, switchBackCircle3 1500ms ease-in-out 250ms forwards;
+@keyframes next-circle-3 {
+    0% {
+        background-size: 100%;
+        rotate: 0deg;
+    }
+    50% {
+        background-size: 200%;
+    }
+    100% {
+        background-size: 100%;
+        rotate: 360deg;
+    }
 }
-.hero .circles-container .circles-subcontainer.back .circle-2::before {
-    animation: switchBack 1500ms ease-in-out 125ms forwards, switchBackCircle2 1500ms ease-in-out 125ms forwards;
+
+@keyframes next-circle-2 {
+    0% {
+        background-size: calc(100%*(100/70));
+        rotate: 0deg;
+    }
+    50% {
+        background-size: calc(1.5*(100%*(100/70)));
+    }
+    100% {
+        background-size: calc(100%*(100/70));
+        rotate: 360deg;
+    }
 }
-.hero .circles-container .circles-subcontainer.back .circle-1::before {
-    animation: switchBack 1500ms ease-in-out 0s forwards, switchBackCircle1 1500ms ease-in-out 0s forwards;
+
+@keyframes next-circle-1 {
+    0% {
+        background-size: calc(100%*(100/40));
+        rotate: 0deg;
+    }
+    50% {
+        background-size: calc(1.25*(100%*(100/40)));
+    }
+    100% {
+        background-size: calc(100%*(100/40));
+        rotate: 360deg;
+    }
 }

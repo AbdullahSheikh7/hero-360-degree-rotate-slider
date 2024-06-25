@@ -7,38 +7,40 @@
     row-gap: 5vw;
 }
 
-.hero .content .title {
+.hero .content :is(.title, .subtitle) {
     overflow: hidden;
+}
+
+.hero .content :is(.title, .subtitle) p {
+    position: relative;
+    top: 0;
+    transition: top 875ms ease-in-out;
 }
 
 .hero .content .title p {
     font-family: Krylon;
-    position: relative;
-    top: 0;
     letter-spacing: 6vw;
     font-size: 4vw;
-    transition: top 875ms ease-in-out;
-}
-
-.hero .content.switching .title p {
-    transition: top 875ms ease-in-out;
-    top: 5vw;
-}
-
-.hero .content .subtitle {
-    overflow: hidden;
 }
 
 .hero .content .subtitle p {
     font-family: Cambria;
-    position: relative;
-    top: 0;
     letter-spacing: 4vw;
     font-size: 2vw;
-    transition: top 875ms ease-in-out;
 }
 
-.hero .content.switching .subtitle p {
-    transition: top 875ms ease-in-out;
-    top: 2vw;
+.hero .content.switching :is(.title, .subtitle) p {
+    animation: content-transition 2200ms ease-in-out;
+}
+
+@keyframes content-transition {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
 }
