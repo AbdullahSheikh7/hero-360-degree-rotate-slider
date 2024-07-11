@@ -41,33 +41,28 @@
 .hero .circles-container .circles-subcontainer :is(.circle-1, .circle-2, .circle-3) {
     opacity: 1;
     rotate: 0deg;
+    transition: background-image 1500ms ease-in-out
 }
 
-.hero .circles-container.next .circles-subcontainer :is(.circle-1, .circle-2, .circle-3) {
-    transition: background-size 1s ease-in-out, rotate 2s ease-in-out, background-image 2s linear
-}
 .hero .circles-container.next .circles-subcontainer .circle-3 {
-    animation: next-circle-3 2s ease-in-out 200ms;
+    animation: circle-3 1500ms ease-in-out 200ms reverse;
 }
 .hero .circles-container.next .circles-subcontainer .circle-2 {
-    animation: next-circle-2 2s ease-in-out 100ms;
+    animation: circle-2 1500ms ease-in-out 100ms reverse;
 }
 .hero .circles-container.next .circles-subcontainer .circle-1 {
-    animation: next-circle-1 2s ease-in-out;
+    animation: circle-1 1500ms ease-in-out 0s reverse;
 }
 
 
-.hero .circles-container.back .circles-subcontainer :is(.circle-1, .circle-2, .circle-3) {
-    transition: background-size 1s ease-in-out, rotate 2s ease-in-out, background-image 2s linear
-}
 .hero .circles-container.back .circles-subcontainer .circle-3 {
-    animation: back-circle-3 2s ease-in-out 200ms;
+    animation: circle-3 1500ms ease-in-out 200ms;
 }
 .hero .circles-container.back .circles-subcontainer .circle-2 {
-    animation: back-circle-2 2s ease-in-out 100ms;
+    animation: circle-2 1500ms ease-in-out 100ms;
 }
 .hero .circles-container.back .circles-subcontainer .circle-1 {
-    animation: back-circle-1 2s ease-in-out;
+    animation: circle-1 1500ms ease-in-out 0s;
 }
 
 .hero .circles-container .circles-subcontainer .circle-2::before {

@@ -1,3 +1,13 @@
+@font-face {
+    font-family: KrylonFont;
+    src: url("../fonts/Krylon-Regular.otf");
+}
+
+@font-face {
+    font-family: CambriaFont;
+    src: url("../fonts/cambria.ttc");
+}
+
 * {
     margin: 0;
     padding: 0;

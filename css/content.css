@@ -4,7 +4,7 @@
     text-align: center;
     color: white;
     display: grid;
-    row-gap: 5vw;
+    row-gap: 2vw;
 }
 
 .hero .content :is(.title, .subtitle) {
@@ -14,23 +14,51 @@
 .hero .content :is(.title, .subtitle) p {
     position: relative;
     top: 0;
-    transition: top 875ms ease-in-out;
 }
 
 .hero .content .title p {
-    font-family: Krylon;
+    font-family: KrylonFont;
     letter-spacing: 6vw;
+    text-indent: 6vw;
     font-size: 4vw;
 }
 
 .hero .content .subtitle p {
-    font-family: Cambria;
-    letter-spacing: 4vw;
+    font-family: CambriaFont;
+    letter-spacing: 3vw;
+    text-indent: 3vw;
     font-size: 2vw;
 }
 
+@media (max-width: 600px) {
+    .hero .content {
+        row-gap: 6vw;
+    }
+
+    .hero .content .title p {
+        letter-spacing: 4vw;
+        text-indent: 4vw;
+        font-size: 10vw;
+    }
+
+    .hero .content .subtitle p {
+        letter-spacing: 2vw;
+        text-indent: 2vw;
+        font-size: 6vw;
+    }
+}
+
+.hero .content .line-seperator {
+    background: white;
+    border: none;
+    width: 70%;
+    border-radius: 50%;
+    height: 2px;
+    margin: auto;
+}
+
 .hero .content.switching :is(.title, .subtitle) p {
-    animation: content-transition 2200ms ease-in-out;
+    animation: content-transition 1000ms ease-in-out 700ms;
 }
 
 @keyframes content-transition {
@@ -38,6 +66,9 @@
         top: 0;
     }
     50% {
+        top: -100%;
+    }
+    50.1% {
         top: 100%;
     }
     100% {

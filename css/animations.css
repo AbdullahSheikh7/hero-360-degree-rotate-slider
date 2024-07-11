@@ -1,4 +1,4 @@
-@keyframes back-circle-3 {
+@keyframes circle-3 {
     0% {
         background-size: 100%;
         rotate: 0deg;
@@ -12,7 +12,7 @@
     }
 }
 
-@keyframes back-circle-2 {
+@keyframes circle-2 {
     0% {
         background-size: calc(100%*(100/70));
         rotate: 0deg;
@@ -26,7 +26,7 @@
     }
 }
 
-@keyframes back-circle-1 {
+@keyframes circle-1 {
     0% {
         background-size: calc(100%*(100/40));
         rotate: 0deg;
@@ -37,47 +37,5 @@
     100% {
         background-size: calc(100%*(100/40));
         rotate: -360deg;
-    }
-}
-
-@keyframes next-circle-3 {
-    0% {
-        background-size: 100%;
-        rotate: 0deg;
-    }
-    50% {
-        background-size: 200%;
-    }
-    100% {
-        background-size: 100%;
-        rotate: 360deg;
-    }
-}
-
-@keyframes next-circle-2 {
-    0% {
-        background-size: calc(100%*(100/70));
-        rotate: 0deg;
-    }
-    50% {
-        background-size: calc(1.5*(100%*(100/70)));
-    }
-    100% {
-        background-size: calc(100%*(100/70));
-        rotate: 360deg;
-    }
-}
-
-@keyframes next-circle-1 {
-    0% {
-        background-size: calc(100%*(100/40));
-        rotate: 0deg;
-    }
-    50% {
-        background-size: calc(1.25*(100%*(100/40)));
-    }
-    100% {
-        background-size: calc(100%*(100/40));
-        rotate: 360deg;
     }
 }
