@@ -5,34 +5,34 @@ let currentImage = 0;
 let images = [
     {
         image: 0,
-        url: "../img/images/img1.webp",
+        url: `${window.location.href}img/images/img1.webp`,
         title: "HIGHLANDS",
         subtitle: "Scotland"
     },
     {
         image: 1,
-        url: "../img/images/img2.webp",
+        url: `${window.location.href}img/images/img2.webp`,
         title: "SAHARA",
         subtitle: "Madagascar"
     },
     {
         image: 2,
-        url: "../img/images/img3.webp",
+        url: `${window.location.href}img/images/img3.webp`,
         title: "DOLOMITES",
         subtitle: "Italy"
     },
     {
         image: 0,
-        url: "../img/images/img4.webp",
+        url: `${window.location.href}img/images/img4.webp`,
         title: "MALDIVES",
         subtitle: "South Asia"
     }
 ]
 
 const firstImage = () => {
-    circle3.style.backgroundImage = `url('${ images[currentImage].url }')`;
-    circle2.style.backgroundImage = `url('${ images[currentImage].url }')`;
-    circle1.style.backgroundImage = `url('${ images[currentImage].url }')`;
+    circle3.style.backgroundImage = `url('${images[currentImage].url}')`;
+    circle2.style.backgroundImage = `url('${images[currentImage].url}')`;
+    circle1.style.backgroundImage = `url('${images[currentImage].url}')`;
     heroContentContainerTitle.innerHTML = (images[currentImage].title).toUpperCase();
     heroContentContainerSubtitle.innerHTML = images[currentImage].subtitle.toUpperCase();
 }
@@ -58,9 +58,9 @@ const switchNext = () => {
 
         btnNext.classList.add("click")
 
-        circle3.style.backgroundImage = `url('${ images[currentImage].url }')`
-        circle2.style.backgroundImage = `url('${ images[currentImage].url }')`
-        circle1.style.backgroundImage = `url('${ images[currentImage].url }')`
+        circle3.style.backgroundImage = `url('${images[currentImage].url}')`
+        circle2.style.backgroundImage = `url('${images[currentImage].url}')`
+        circle1.style.backgroundImage = `url('${images[currentImage].url}')`
 
         circlesContainer.classList.add("next")
         heroContentContainer.classList.add("switching")
@@ -91,9 +91,9 @@ const switchBack = () => {
 
         btnBack.classList.add("click")
 
-        circle3.style.backgroundImage = `url('${ images[currentImage].url }')`
-        circle2.style.backgroundImage = `url('${ images[currentImage].url }')`
-        circle1.style.backgroundImage = `url('${ images[currentImage].url }')`
+        circle3.style.backgroundImage = `url('${images[currentImage].url}')`
+        circle2.style.backgroundImage = `url('${images[currentImage].url}')`
+        circle1.style.backgroundImage = `url('${images[currentImage].url}')`
 
         circlesContainer.classList.add("back")
         heroContentContainer.classList.add("switching")
